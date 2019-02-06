@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Resume</title>
-        <link rel="stylesheet" href="/static/css/style.css">
+        <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://bootswatch.com/3/space/bootstrap.min.css">
+        <link rel="stylesheet" href="https://bootswatch.com/3/paper/bootstrap.min.css">
         <style type="text/css">
             body {
               padding-top: 20px;
@@ -45,6 +45,18 @@
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+
+            jQuery.get('static/data/file.csv', function(data) {
+                alert(data); // this is a line
+                var tempArray = data.split(','); // array of data
+                for(var i = 0; i < tempArray.length; i++)
+                {
+                    console.log(tempArray[i]); // probably index 1 is your IPv6 address.
+                }
+            });
+
+        </script>
     </body>
 
 </html>
